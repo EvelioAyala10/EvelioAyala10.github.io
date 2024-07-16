@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>App de Filmes</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#movies">Filmes</a></li>
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#favorites">Favoritos</a></li>
+                <li><a href="#" id="theme-toggle">Mudar Tema</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-bar" placeholder="Buscar...">
+        <select id="filter-genre">
+            <option value="">Todos os Gêneros</option>
+            <option value="ação">Ação</option>
+            <option value="comédia">Comédia</option>
+            <option value="drama">Drama</option>
+        </select>
+        <select id="filter-year">
+            <option value="">Todos os Anos</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+        </select>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <h2>Filmes em Destaque</h2>
+            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="Detalhes do Filme 1...">
+                <img src="https://logodownload.org/wp-content/uploads/2017/07/sportv-logo-0.png" alt="Filme 1">
+                <p>SPORTV HD</p>
+            </div>
+            <div class="banner" data-movie="https://embedflix.online/tv/sportv-2-hd" data-details="Detalhes do Filme 2...">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJyFTXsBFbBbqHjQRkDMjMQuppGKXVqNZYMEyt6ALx_MlJX_PHWo0Ycuo&s=10" alt="SporTv 2">
+                <p>SPORTV 2</p>
+            </div>
+        </section>
+
+        <section id="movies">
+            <h2>Todos os Filmes</h2>
+            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="Detalhes do Filme 1...">
+                <img src="https://logodownload.org/wp-content/uploads/2017/07/sportv-logo-0.png" alt="Filme 1">
+                <p>Filme 1</p>
+            </div>
+            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd2" data-details="Detalhes do Filme 2...">
+                <img src="images/banner2.jpg" alt="Filme 2">
+                <p>Filme 2</p>
+            </div>
+            <!-- Adicione mais banners conforme necessário -->
+        </section>
+
+        <section id="video-section">
+            <button id="back-button">Voltar</button>
+            <iframe id="movie-player" src="" frameborder="0" allowfullscreen></iframe>
+            <div id="movie-details"></div>
+            <button id="add-to-favorites">Adicionar aos Favoritos</button>
+        </section>
+
+        <section id="favorites">
+            <h2>Seus Favoritos</h2>
+            <div id="favorites-list"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

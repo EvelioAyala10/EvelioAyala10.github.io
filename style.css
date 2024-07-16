@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+input, select {
+    margin-left: 1em;
+    padding: 0.5em;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.banner {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner p {
+    margin: 0;
+    padding: 1em;
+    background-color: #ff9800;
+    color: #fff;
+    text-align: center;
+}
+
+.banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#video-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#video-section iframe {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1em;
+}
+
+#add-to-favorites {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#add-to-favorites:hover {
+    background-color: #e68900;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-mode header {
+    background-color: #444;
+}
+
+.dark-mode nav ul li a {
+    color: #f0f0f0;
+}
+
+.dark-mode .banner {
+    background-color: #444;
+    border-color: #666;
+}
+
+.dark-mode .banner p {
+    background-color: #555;
+}
