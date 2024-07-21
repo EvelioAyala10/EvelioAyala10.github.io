@@ -1,34 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
     background-color: #ff9800;
     color: #fff;
     padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-header h1 {
-    margin: 0;
+    text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
+    list-style-type: none;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
+    display: inline;
     margin-right: 1em;
 }
 
@@ -37,13 +28,20 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+#search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 5px;
 }
 
-input, select {
-    margin-left: 1em;
+select {
     padding: 0.5em;
+    margin-left: 0.5em;
+    border: none;
+    border-radius: 5px;
 }
 
 main {
@@ -59,43 +57,52 @@ section.active {
 }
 
 .banner {
-    background-color: #fff;
+    cursor: pointer;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 1em;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .banner img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
 .banner p {
     margin: 0;
-    padding: 1em;
+    padding: 0.5em;
     background-color: #ff9800;
     color: #fff;
     text-align: center;
 }
 
-.banner:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#movies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin-bottom: 1em;
 }
 
-#video-section {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+#next-page {
+    display: block;
+    margin: 0 auto;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-#video-section iframe {
+#next-page:hover {
+    background-color: #e68900;
+}
+
+#movie-player {
     width: 100%;
     height: 300px;
-    margin-bottom: 1em;
 }
 
 #add-to-favorites {
@@ -114,22 +121,34 @@ section.active {
 
 .dark-mode {
     background-color: #333;
-    color: #f0f0f0;
+    color: #fff;
 }
 
 .dark-mode header {
-    background-color: #444;
+  background-color: #444;
 }
 
 .dark-mode nav ul li a {
-    color: #f0f0f0;
-}
-
-.dark-mode .banner {
-    background-color: #444;
-    border-color: #666;
+  color: #ff9800;
 }
 
 .dark-mode .banner p {
-    background-color: #555;
+  background-color: #444;
+  color: #ff9800;
+}
+
+.dark-mode #next-page {
+  background-color: #444;
+  color: #ff9800;
+}
+
+.dark-mode #add-to-favorites {
+  background-color: #444;
+  color: #ff9800;
+}
+
+@media (max-width: 600px) {
+  #movies-grid {
+    grid-template-columns: 1fr;
+  }
 }
