@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const movieDetails = document.getElementById('movie-details');
     const backButton = document.getElementById('back-button');
     const addToFavoritesButton = document.getElementById('add-to-favorites');
-    const themeToggle = document.getElementById('theme-toggle');
     const bannerSection = document.getElementById('home');
     const nextPageButton = document.getElementById('next-page');
+    const previousPageButton = document.getElementById('previous-page');
     const moviesGrid = document.getElementById('movies-grid');
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    let currentPage = 0;
+    let currentPage = 1;
     const bannersPerPage = 10;
 
     navLinks.forEach(link => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sections.forEach(section => section.classList.remove('active'));
             document.getElementById(targetId).classList.add('active');
             if (targetId === 'movies') {
-                renderMovies(currentPage);
+                showPage(currentPage);
             }
         });
     });
@@ -72,22 +72,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const renderMovies = (page) => {
+    const showPage = (page) => {
         const banners = Array.from(moviesGrid.children);
+        const totalBanners = banners.length;
+        const start = (page - 1) * bannersPerPage;
+        const end = start + bannersPerPage;
+
         banners.forEach((banner, index) => {
-            if (index >= page * bannersPerPage && index < (page + 1) * bannersPerPage) {
+            if (index >= start && index < end) {
                 banner.style.display = 'block';
             } else {
                 banner.style.display = 'none';
             }
         });
+
+        previousPageButton.disabled = (page === 1);
+        nextPageButton.disabled = (end >= totalBanners);
     };
 
     nextPageButton.addEventListener('click', () => {
-        currentPage++;
-        renderMovies(currentPage);
-        if ((currentPage + 1) * bannersPerPage >= moviesGrid.children.length) {
-            nextPageButton.style.display = 'none';
+        const banners = document.querySelectorAll('#movies-grid .banner');
+        const totalPages = Math.ceil(banners.length / bannersPerPage);
+
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    });
+
+    previousPageButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
         }
     });
 
@@ -145,10 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-
-    renderMovies(currentPage);
+    showPage(currentPage);
     renderFavorites();
 });

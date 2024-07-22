@@ -119,36 +119,8 @@ section.active {
     background-color: #e68900;
 }
 
-.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark-mode header {
-  background-color: #444;
-}
-
-.dark-mode nav ul li a {
-  color: #ff9800;
-}
-
-.dark-mode .banner p {
-  background-color: #444;
-  color: #ff9800;
-}
-
-.dark-mode #next-page {
-  background-color: #444;
-  color: #ff9800;
-}
-
-.dark-mode #add-to-favorites {
-  background-color: #444;
-  color: #ff9800;
-}
-
 @media (max-width: 600px) {
-  #movies-grid {
-    grid-template-columns: 1fr;
-  }
+    #movies-grid {
+        grid-template-columns: 1fr;
+    }
 }

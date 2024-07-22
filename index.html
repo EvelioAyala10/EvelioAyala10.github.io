@@ -3,98 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Filmes</title>
+    <title>FUTEMIX TV</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <header>
-        <h1>App de Filmes</h1>
+        <h1>FUTEMIX TV</h1>
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#movies">Filmes</a></li>
-                <li><a href="#series">Séries</a></li>
-                <li><a href="#favorites">Favoritos</a></li>
-                <li><a href="#" id="theme-toggle">Mudar Tema</a></li>
+                <li><a href="#movies">Esportes Online</a></li>
             </ul>
         </nav>
         <input type="text" id="search-bar" placeholder="Buscar...">
-        <select id="filter-genre">
-            <option value="">Todos os Gêneros</option>
-            <option value="ação">Ação</option>
-            <option value="comédia">Comédia</option>
-            <option value="drama">Drama</option>
-        </select>
-        <select id="filter-year">
-            <option value="">Todos os Anos</option>
-            <option value="2024">2024</option>
-            <option value="2023">2023</option>
-        </select>
     </header>
 
     <main>
         <section id="home" class="active">
-            <h2>Filmes em Destaque</h2>
-            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="Detalhes do Filme 1...">
-                <img src="images/banner1.jpg" alt="Filme 1">
-                <p>Filme 1</p>
+            <h2>Destaques</h2>
+            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="CAREGANDO O PLAYER AGUARDAR...">
+                <img src="/espn-logo-0.png" alt="ESPN">
+                <p>ESPN</p>
             </div>
-            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd2" data-details="Detalhes do Filme 2...">
-                <img src="images/banner2.jpg" alt="Filme 2">
-                <p>Filme 2</p>
+            <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="CAREGANDO O PLAYER AGUARDAR...">
+                <img src="/images (4).png" alt="SPORTV">
+                <p>SPORTV</p>
             </div>
         </section>
 
         <section id="movies">
-            <h2>Todos os Filmes</h2>
+            <h2>Todos os Canais</h2>
             <div id="movies-grid">
                 <!-- Banners de filmes -->
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="Detalhes do Filme 1...">
-                    <img src="images/banner1.jpg" alt="Filme 1">
-                    <p>Filme 1</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/espn" data-details="ESPN">
+                    <img src="/espn-logo-0.png" alt="ESPN">
+                    <p>ESPN</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd2" data-details="Detalhes do Filme 2...">
-                    <img src="images/banner2.jpg" alt="Filme 2">
-                    <p>Filme 2</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/espn-2" data-details="ESPN 2">
+                    <img src="/espn-logo-0.png" alt="ESPN 2">
+                    <p>ESPN 2</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd3" data-details="Detalhes do Filme 3...">
-                    <img src="images/banner3.jpg" alt="Filme 3">
-                    <p>Filme 3</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/espn-3" data-details="ESPN 3">
+                    <img src="/espn-logo-0.png" alt="ESPN 3">
+                    <p>ESPN 3</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd4" data-details="Detalhes do Filme 4...">
-                    <img src="images/banner4.jpg" alt="Filme 4">
-                    <p>Filme 4</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="SPORTV">
+                    <img src="/images (4).png" alt="SPORTV">
+                    <p>SPORTV</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd5" data-details="Detalhes do Filme 5...">
-                    <img src="images/banner5.jpg" alt="Filme 5">
-                    <p>Filme 5</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-2-hd" data-details="SPORTV 2">
+                    <img src="/images (4).png" alt="SPORTV 2">
+                    <p>SPORTV 2</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd6" data-details="Detalhes do Filme 6...">
-                    <img src="images/banner6.jpg" alt="Filme 6">
-                    <p>Filme 6</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-3-hd" data-details="SPORTV 3">
+                    <img src="/images (4).png" alt="SPORTV 3">
+                    <p>SPORTV 3</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd7" data-details="Detalhes do Filme 7...">
-                    <img src="images/banner7.jpg" alt="Filme 7">
-                    <p>Filme 7</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/caze-tv-1" data-details="CAZE TV...">
+                    <img src="/cazetv-logo-0.png" alt="CAZETV">
+                    <p>CAZETV</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd8" data-details="Detalhes do Filme 8...">
-                    <img src="images/banner8.jpg" alt="Filme 8">
-                    <p>Filme 8</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/pfc-clubes-fhd" data-details="PREMIER HD">
+                    <img src="/images (1).png" alt="PREMIER FULL HD">
+                    <p>PREMIER FULL HD</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd9" data-details="Detalhes do Filme 9...">
-                    <img src="images/banner9.jpg" alt="Filme 9">
-                    <p>Filme 9</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/prfc-1-hd" data-details="PREMIER 1">
+                    <img src="/images (1).png" alt="PREMIER 1">
+                    <p>PREMIER 1</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd10" data-details="Detalhes do Filme 10...">
-                    <img src="images/banner10.jpg" alt="Filme 10">
-                    <p>Filme 10</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/prfc-2-hd" data-details="PREMIER 2">
+                    <img src="/images (1).png" alt="PREMIER 2">
+                    <p>PREMIER 2</p>
                 </div>
-                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd11" data-details="Detalhes do Filme 11...">
-                    <img src="images/banner11.jpg" alt="Filme 11">
-                    <p>Filme 11</p>
+                <div class="banner" data-movie="https://embedflix.online/tv/prfc-3-hd" data-details="PREMIER 3">
+                    <img src="/images (1).png" alt="PREMIER 3">
+                    <p>PREMIER 3</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/prfc-4-hd" data-details="PREMIER 4">
+                    <img src="/images (1).png" alt="PREMIER 4">
+                    <p>PREMIER 4</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/prfc-5-hd" data-details="PREMIER 5">
+                    <img src="/images (1).png" alt="PREMIER 5">
+                    <p>PREMIER 5</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/prfc-6-hd" data-details="PREMIER 6">
+                    <img src="/images (1).png" alt="PREMIER 6">
+                    <p>PREMIER 6</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/star-1-hd" data-details="DISNEY +">
+                    <img src="/disney-logo-disney-icon-transparent-free-png.png" alt="DISNEY +">
+                    <p>DISNEY +</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/star-2-hd" data-details="DISNEY +">
+                    <img src="/images.png" alt="DISNEY +">
+                    <p>DISNEY +</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/prime-tv" data-details="PRIME TV">
+                    <img src="/download.png" alt="PRIME VIDEO">
+                    <p>PRIME VIDEO</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/paramount-plus" data-details="PARAMOUNT PLUS">
+                    <img src="/paramount-plus-logo-0.png" alt="PARAMOUNT PLUS">
+                    <p>PARAMOUNT PLUS</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/hbo-max" data-details="MAX">
+                    <img src="/images (5).png" alt="MAX">
+                    <p>MAX</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/combate" data-details="CANAL COMBATE">
+                    <img src="/logo-canal-combate-1536.png" alt="CANAL COMBATE">
+                    <p>CANAL COMBATE</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/ufc-fight-pass-hd" data-details="UFC">
+                    <img src="/images (8).png" alt="UFC">
+                    <p>UFC</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/globo-sp" data-details="GLOBO SP">
+                    <img src="/globo-logo-01FA52746B-seeklogo.com.png" alt="GLOBO SP">
+                    <p>GLOBO</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/globo-rio" data-details="GLOBO RIO">
+                    <img src="/cb768057ae5472d7b1f1f17ce60737ed.png" alt="GLOBO RIO">
+                    <p>GLOBO RIO</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/band-tv-sp" data-details="BAND TV">
+                    <img src="/74aed8843f43a46b63737f4451e337f0.png" alt="BAND">
+                    <p>BAND</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd25" data-details="Detalhes do Filme 25...">
+                    <img src="/cnn_logo_icon_170360.png" alt="CNN BRASIL">
+                    <p>CNN BRASIL</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/record-tv-sp" data-details="RECORD TV">
+                    <img src="/record-tv-logo.png" alt="RECORD TV">
+                    <p>RECORD TV</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd" data-details="SBT">
+                    <img src="/Logotipo_do_SBT.svg.png" alt="SBT">
+                    <p>SBT</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd28" data-details="Detalhes do Filme 28...">
+                    <img src="/images (1).png" alt="PREMIER 21">
+                    <p>PREMIER 21</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd29" data-details="Detalhes do Filme 29...">
+                    <img src="/images (1).png" alt="PREMIER 22">
+                    <p>PREMIER 22</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd30" data-details="Detalhes do Filme 30...">
+                    <img src="/images (1).png" alt="PREMIER 23">
+                    <p>PREMIER 23</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd31" data-details="Detalhes do Filme 31...">
+                    <img src="/images (1).png" alt="PREMIER 24">
+                    <p>PREMIER 24</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd32" data-details="Detalhes do Filme 32...">
+                    <img src="/images (1).png" alt="PREMIER 25">
+                    <p>PREMIER 25</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd33" data-details="Detalhes do Filme 33...">
+                    <img src="/images (1).png" alt="PREMIER 26">
+                    <p>PREMIER 26</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd34" data-details="Detalhes do Filme 34...">
+                    <img src="/images (1).png" alt="PREMIER 27">
+                    <p>PREMIER 27</p>
+                </div>
+                <div class="banner" data-movie="https://embedflix.online/tv/sportv-hd35" data-details="Detalhes do Filme 35...">
+                    <img src="/images (1).png" alt="PREMIER 28">
+                    <p>PREMIER 28</p>
                 </div>
             </div>
+            <button id="previous-page">Anterior</button>
             <button id="next-page">Próximo</button>
         </section>
 
